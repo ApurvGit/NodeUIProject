@@ -1,0 +1,29 @@
+authRouter
+  -POST /signup
+  -POST /login
+  -POST /logout
+
+profileRouter
+ -GET /profile/view
+ -PATCH /pr0file/edit
+ -PATCH /profile/password
+
+connectionRequestRouter
+ -POST /request/send/intrested/:userId
+ -POST /request/send/ignored/:userId
+ -POST /request/review/accpeted/:requestId
+ -POST /request/review/rejected/:requestId
+
+userRouter
+ -GET /users/connection
+ -GET /users/request/
+ -GET /user/feed/
+
+ Status-ignore,accept,rejcted,interested
+
+ feed api logic-
+  login user should see cards in feed profile expect:
+    own connection
+    his accpeted connections
+    ignored connections
+    already sent connections request

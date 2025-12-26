@@ -27,6 +27,9 @@ app.use("/", profileRouter);
 app.use("/", requestRouter);
 app.use("/", viewConnectionRequests);
 
+app.get("/", (req, res) => {
+    res.send("API is running ");
+});
 
 app.listen(4444, () => {
     console.log("Server restarted")

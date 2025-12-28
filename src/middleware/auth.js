@@ -5,7 +5,7 @@ const userAuth = async (req, res, next) => {
   const { token } = req.cookies;
   // console.log(token)
   if (!token) {
-    throw new Error("Invalid User")
+    throw new Error("Invalid Token")
   }
   try {
     const decodedToken = await verify(token, 'DEV@NodePratice789#!@')
